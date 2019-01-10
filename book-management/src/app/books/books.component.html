@@ -1,0 +1,65 @@
+<div class="header" *ngIf = 'typeofuser === "admin"'>
+  <h1>Book Management Store</h1>
+  <a class="logout" (click)="logout()">Logout</a>
+  <a *ngIf='typeofuser === "admin"' (click)="checknav()">Back</a>
+</div>
+
+<div class="header" *ngIf = 'typeofuser === "user"'>
+  <h1>Book Management Store</h1>
+  <a class="logout" (click)="logout()">Logout</a>
+  <a class="user-cart" (click)="gotocart()">Cart (+{{shoppingcartlength}})</a>
+</div>
+
+<div *ngIf = 'typeofuser === "admin"'>
+<div class="book" *ngFor = "let data of allbooks; let i = index" (click)="onClick(i, data[0]['id'])">
+  <a>
+  <div class="details">
+    <p>{{data[0]['name']}}<br><br>
+      <span style="font-weight: bold; text-align: center">Rating: {{data[0]['rating']}}/5</span></p>
+  </div>
+  <div class="pic">
+    <img src="{{data[0]['imgpath']}}" alt="No Image">
+  </div>
+  </a>
+</div>
+<div class="selected" *ngIf="show">
+<div class="display">
+  <img src="{{img}}" alt="No Image" style="height:290px">
+  <hr>
+  <p style="font-weight: bolder; font-size: 20px; text-align: center">{{name}}</p>
+  <p style="color: saddlebrown; text-align: justify">{{desc}}</p>
+  <p style="font-weight: bolder; text-align: center">Price: {{price}}/-</p>
+  <a class="cart" (click)="edit()">Edit</a>
+  <br><br>
+  </div>
+</div>
+</div>
+
+<div *ngIf = 'typeofuser === "user"'>
+  <div class="book" *ngFor = "let data of allbooks; let i = index" (click)="onClick(i, data[0].id)">
+    <a>
+      <div class="details">
+        <p>{{data[0]['name']}}<br><br>
+          <span style="font-weight: bold; text-align: center">Rating: {{data[0]['rating']}}/5</span></p>
+      </div>
+      <div class="pic">
+        <img src="{{data[0]['imgpath']}}" alt="No Image">
+      </div>
+    </a>
+  </div>
+  <div class="selected" *ngIf="show">
+    <div class="display">
+      <img src="{{img}}" alt="No Image" style="height:290px">
+      <hr>
+      <p style="font-weight: bolder; font-size: 20px; text-align: center">{{name}}</p>
+      <p style="color: saddlebrown; text-align: justify">{{desc}}</p>
+      <p style="font-weight: bolder; text-align: center">Price: {{price}}/-</p>
+      <a class="cart" (click)="addtocart()">Add to cart</a>
+      <a class="view" href= "{{bookpath}}" target="_blank">View</a>
+      <br><br>
+    </div>
+  </div>
+</div>
+<div class="edit">
+  <router-outlet></router-outlet>
+</div>

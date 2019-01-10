@@ -1,0 +1,26 @@
+<div class="header">
+  <h1>Book Management Store</h1>
+</div>
+<div class="signup">
+  <br><br>
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <fieldset>
+      <legend>Sign-Up</legend>
+      Enter your Email: <input type="email" name="username" ngModel required #username="ngModel"><br>
+      <span style="font-size: 14px" *ngIf="username.touched && username.invalid">Please enter a valid email id..</span><br>
+      Enter your password: <input type="password" name="password" ngModel required #password="ngModel"><br>
+      <span style="font-size: 14px" *ngIf="password.touched && password.invalid">Please enter a valid email password..</span><br>
+      Re-type your password: <input type="password" name="passwordcheck" ngModel required #passwordcheck="ngModel"><br>
+      <span style="font-size: 14px; margin-bottom:10px" *ngIf="passwordcheck.touched && passwordcheck.invalid">Please enter a valid password..</span><br>
+      <span *ngIf="passcheck === false" style="font-size: 15px; background-color: crimson;color: white; padding: 7px">
+        Passwords must be same !<br></span>
+      <span *ngIf="created === false" style="font-size: 15px; background-color: crimson;color: white; padding: 7px">
+        Account cannot be created..Please try again with valid email/password !<br></span>
+      <span *ngIf="created === true" style="font-size: 15px; background-color: green;color: white; padding: 7px">
+        Account is created succesfully..Please login from Sign-in page !<br></span>
+      <button type="submit" [disabled]="!form.valid">Create account</button>
+      <br><br>
+      <a routerLink="/signin">Already have an Account?</a>
+    </fieldset>
+  </form>
+</div>

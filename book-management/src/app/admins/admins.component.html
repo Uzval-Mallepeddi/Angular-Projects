@@ -1,0 +1,13 @@
+<div class="header">
+  <h1>Book Management Store</h1>
+  <a class="logout" (click)="logout()">Logout</a>
+  <a *ngIf=navigated (click)="checknav()">Back</a>
+</div>
+<div class="content" *ngIf= allowvisibility>
+  <h1 style="color: black">Welcome admin !</h1><br><br>
+  <button (click)="nav('man')">Manage books</button>
+  <button (click)="nav('add')">Add books</button>
+</div>
+<div class="addbook" *ngIf=!allowvisibility>
+  <app-add-book></app-add-book>
+</div>

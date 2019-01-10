@@ -1,0 +1,19 @@
+<div class="header">
+  <h1>Book Management Store</h1>
+</div>
+<div class="signin">
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <fieldset>
+      <legend>Login</legend>
+    Email: <input type="email" name="username" ngModel required #username="ngModel"><br>
+      <span style="font-size: 14px" *ngIf="username.touched && username.invalid">Please enter a valid email id..</span><br>
+    Password: <input type="password" name="password" ngModel required #password="ngModel"><br>
+      <span style="font-size: 14px;" *ngIf="password.touched && password.invalid">Please enter a valid password..</span><br>
+      <span *ngIf="wrongpassword === true" style="font-size: 15px; background-color: crimson;color: white; padding: 7px">
+        Incorrect email/password..Please try again !<br></span>
+    <button type="submit" name="submitbutton" [disabled]="!form.valid">Login</button>
+      <br><br>
+      <a routerLink="/signup">New User?</a>
+    </fieldset>
+  </form>
+</div>

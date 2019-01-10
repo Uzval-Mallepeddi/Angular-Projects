@@ -1,0 +1,38 @@
+.addbook {
+  text-align: center;
+  margin-top: 50px;
+}
+
+label {
+  color: crimson;
+  font-size: 20px;
+}
+button{
+  padding: 10px 15px;
+  margin-right: 25px;
+  background-color: red;
+  color: white;
+  font-size: 15px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: crimson;
+}
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+input.ng-valid {
+  border: 1px solid forestgreen;
+}
+button:disabled {
+  cursor: not-allowed;
+  color: black;
+  background-color: white;
+  border: 1px solid red;
+}
+span {
+  margin-left: 100px;
+  margin-top:10px;
+  background-color: red;
+}
+

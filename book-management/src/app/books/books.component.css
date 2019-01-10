@@ -1,0 +1,101 @@
+.header {
+  text-align: center;
+  font-size: 15px;
+  width: 99%;
+  margin:0;
+  padding:10px;
+  color: chartreuse;
+  background-color: black;
+}
+.book {
+  margin: 18px 45px;
+  padding: 10px 12px 10px 12px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width:25%;
+  overflow: hidden;
+}
+.book:hover {
+  background-color: gainsboro;
+  cursor: pointer;
+}
+.details p{
+  width: 65%;
+  overflow: hidden;
+  float:left;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.pic{
+  float: right;
+}
+.header a {
+  float: right;
+  padding: 10px 20px;
+  position: relative;
+  transform: translate(-50%, -150%);
+  left:27px;
+  font-size: 18px;
+  color: white;
+}
+.header a:hover {
+  cursor: pointer;
+  color: black;
+  background-color: antiquewhite;
+}
+.header h1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.pic img {
+  max-height:120px;
+  max-width: 110px;
+}
+.selected {
+  float: right;
+  margin-right: 300px;
+  position: relative;
+  transform: translate(-50%,-260%);
+}
+.display {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  transform: translate(10%,195%);
+  overflow: auto;
+}
+.selected .price {
+  position: relative;
+  right: 10%;
+}
+.user-cart {
+  color: white;
+}
+.user-cart:hover {
+  color: black;
+}
+.selected .display {
+  text-align: center;
+}
+.selected .display a{
+  padding: 10px;
+  background-color: dodgerblue;
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.selected .display a:hover {
+  cursor: pointer;
+  background-color: blue;
+}
+.edit {
+  float: right;
+  width: 70%;
+}

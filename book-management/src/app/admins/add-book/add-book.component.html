@@ -1,0 +1,30 @@
+<div class="addbook">
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <label>Book ID: </label><input type="number" name="id" ngModel #id="ngModel" required><br>
+  <span *ngIf="id.touched && id.invalid">Please enter a valid ID..</span>
+  <br><br>
+  <label>Book Name: </label> <input type="text" name="name" #name = "ngModel" ngModel required><br>
+  <span *ngIf="name.touched && name.invalid">Please enter a valid Name..</span>
+  <br><br>
+  <label>Book Price: </label><input type="number" name="price" min="1" #price="ngModel" ngModel required><br>
+  <span *ngIf="price.touched && price.invalid">Please enter a valid Price..</span>
+  <br><br>
+  <label>Book Author: </label><input type="text" name="author" #author="ngModel" ngModel required><br>
+  <span *ngIf="author.touched && author.invalid">Please enter a valid Author name..</span>
+  <br><br>
+  <label>Book Rating: </label><input type="range" name="rating" id="rate" oninput="range_display.value=rate.value" ngModel min=0 max=5 #rating="ngModel" required> <b><output style="color: darkslategray; font-size: 20px; margin-left: 10px" id="range_display"></output></b><label style="font-size: 20px">/5</label><br>
+  <span *ngIf="rating.touched && rating.invalid">Please enter a valid Rating..</span>
+  <br><br>
+  <label>Book Description: </label><textarea name="desc" rows="5" cols="20" #desc="ngModel" ngModel required></textarea><br>
+  <span *ngIf="desc.touched && desc.invalid">Please enter a valid Description..</span>
+  <br><br>
+  <label>Image Path: </label><input type="text" name="imgpath" ngModel #imgpath="ngModel" required><br>
+  <span *ngIf="imgpath.touched && imgpath.invalid">Please enter a valid Image Path..</span>
+  <br><br>
+  <label>Sample Book Path: </label><input type="text" name="bookpath" ngModel #bookpath="ngModel" required><br>
+  <span *ngIf="bookpath.touched && bookpath.invalid">Please enter a valid Book Path..</span>
+  <br><br>
+  <button type="submit" [disabled]="!form.valid">Add</button>
+  <button type="reset" (click)="resetform(form)">Reset</button>
+</form>
+</div>

@@ -1,0 +1,56 @@
+.header {
+  text-align: center;
+  font-size: 15px;
+  width: 99%;
+  padding:10px;
+  color: chartreuse;
+  background-color: black;
+  overflow: hidden;
+}
+.header h1{
+  float: left;
+  top:50%;
+  transform: translate(160%,-10%);
+}
+.content {
+  margin-top:10px;
+  background-image: url("adminbooks.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  padding: 190px;
+  text-align: center;
+  color: white;
+}
+.header a {
+  float: right;
+  padding: 10px 20px;
+  position: relative;
+  transform: translate(-50%, 50%);
+  left:27px;
+  font-size: 18px;
+}
+.header a:hover {
+  cursor: pointer;
+  color: black;
+  background-color: antiquewhite;
+}
+.header h1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+button{
+  padding: 10px 15px;
+  margin-right: 25px;
+  background-color: red;
+  color: white;
+  font-size: 15px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: crimson;
+}
+
+

@@ -1,0 +1,62 @@
+.header {
+  text-align: center;
+  font-size: 15px;
+  width: 99%;
+  margin:0;
+  padding:10px;
+  color: chartreuse;
+  background-color: black;
+}
+.header a {
+  float: right;
+  padding: 10px 20px;
+  position: relative;
+  transform: translate(-50%, -150%);
+  left:27px;
+  font-size: 18px;
+  color: white;
+}
+.header a:hover {
+  cursor: pointer;
+  color: black;
+  background-color: antiquewhite;
+}
+.cart{
+  margin: 20px;
+  padding: 10px;
+  width: 90%;
+  height: auto;
+  border: 1px solid olivedrab;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cart:hover {
+  background-color: gainsboro;
+}
+.cart .item-details {
+  float: left;
+}
+.cart .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.cart .item-image {
+  float: right;
+}
+.cart .item-remove button{
+  display: block;
+  padding: 15px;
+  font-size: 20px;
+  background-color: dodgerblue;
+  color: white;
+  position: relative;
+  transform: translate(170%,120%);
+}
+/*.cart:hover .item-remove button{
+  cursor: pointer;
+  display: block;
+  position: relative;
+  transform: translate(170%,120%);
+}
+*/

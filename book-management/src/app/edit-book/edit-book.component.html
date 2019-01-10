@@ -1,0 +1,38 @@
+<div class="header">
+  <h1>Book Management Store</h1>
+  <a class="logout" (click)="logout()">Logout</a>
+  <a class="back" (click)="back()">Back</a>
+</div>
+
+<div class="editbook">
+  <form #form="ngForm">
+    <label>Book ID: </label><input type="text" name="id" #id [value]=bookid required ><br>
+    <span *ngIf="id.touched && id.invalid">Please enter a valid ID..</span>
+    <br><br>
+    <label>Book Name: </label><input type="text" name="name" [value]=bookname #name required><br>
+    <span *ngIf="name.touched && name.invalid">Please enter a valid name..</span>
+    <br><br>
+    <label>Book Author: </label><input type="text" name="author" [value]=bookauthor #author required><br>
+    <span *ngIf="author.touched && author.invalid">Please enter a valid author..</span>
+    <br><br>
+    <label>Book Price: </label><input type="text" name="price" [value]=bookprice #price required><br>
+    <span *ngIf="price.touched && price.invalid">Please enter a valid price..</span>
+    <br><br>
+    <label>Book Description: </label><textarea rows="5" cols="20" name="desc" [value]=bookdesc #desc required></textarea><br>
+    <span *ngIf="desc.touched && desc.invalid">Please enter a valid desc..</span>
+    <br><br>
+    <label>Book Rating: </label><input type="text" name="rating" [value]=bookrating #rating required><br>
+    <span *ngIf="rating.touched && rating.invalid">Please enter a valid rating..</span>
+    <br><br>
+    <label>Image Path: </label><input type="text" name="imgpath" [value]=bookimgpath #imgpath required><br>
+    <span *ngIf="imgpath.touched && imgpath.invalid">Please enter a valid image path..</span>
+    <br><br>
+    <label>Book Path: </label><input type="text" name="bookpath" [value]=bkpath #bookpath required><br>
+    <span *ngIf="bookpath.touched && bookpath.invalid">Please enter a valid book path..</span>
+    <br><br>
+    <button type="button" [disabled]="!form.valid"
+            (click)="onSubmit(id.value, name.value, author.value, price.value,
+             rating.value, desc.value, imgpath.value, bookpath.value)">Edit</button>
+  </form>
+</div>
+

@@ -1,0 +1,62 @@
+.header {
+  text-align: center;
+  font-size: 15px;
+  width: 99%;
+  margin:0;
+  padding:10px;
+  color: chartreuse;
+  background-color: black;
+}
+.header a {
+  float: right;
+  padding: 10px 20px;
+  position: relative;
+  transform: translate(-50%, -150%);
+  left:27px;
+  font-size: 18px;
+  color: white;
+}
+.header a:hover {
+  cursor: pointer;
+  color: black;
+  background-color: antiquewhite;
+}
+.header h1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+input.ng-valid.ng-touched, textarea.ng-valid.ng-touched {
+  border: 1px solid green;
+}
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.editbook {
+  border: 1px solid dodgerblue;
+  margin: 20px;
+  text-align: center;
+  width: 50%;
+  position: relative;
+  transform: translate(50%,2%);
+}
+form {
+  margin: 15px;
+}
+.editbook button:disabled {
+  cursor: not-allowed;
+}
+.editbook button {
+  background-color: dodgerblue;
+  color: black;
+  padding: 16px;
+  font-size: 18px;
+}
+.editbook button:hover {
+  background-color: cornflowerblue;
+  cursor: pointer;
+}
+label {
+  color: firebrick;
+  font-size: 17px;
+}

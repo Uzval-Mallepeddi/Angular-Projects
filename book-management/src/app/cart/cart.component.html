@@ -1,0 +1,22 @@
+<div class="header">
+  <h1>Book Management Store</h1>
+  <a (click)="logout()">Logout</a>
+  <a (click)="back()">Back</a>
+</div>
+<div *ngIf = "noitem === true">
+  <p style="font-size: larger; text-align: center; padding: 20px">Your cart is empty</p>
+</div>
+<div class="cart" *ngFor = "let item of cartdata; let i=index">
+  <div class="item-details clearfix">
+    <p>Book Name: <b>{{item[0]['name']}}</b></p>
+    <p>Price: <b>{{item[0]['price']}}</b></p>
+    <p>Author: <b>{{item[0]['author']}}</b></p>
+    <p>Rating: <b>{{item[0]['rating']}}/5</b></p>
+  </div>
+    <div class="item-image">
+      <img src="{{item[0]['imgpath']}}" alt="No Image" style="max-width: 220px; max-height: 200px">
+    </div>
+    <div class="item-remove">
+      <button type="button" (click)="removeitem(item)">Remove from cart</button>
+    </div>
+</div>
